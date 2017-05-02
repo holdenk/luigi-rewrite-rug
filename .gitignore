@@ -87,3 +87,7 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+#Exclude tsc generated files
+js/*.map
+js/ts.js
