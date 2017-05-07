@@ -1,0 +1,8 @@
+language: typescript
+before_install:
+  - npm install typescript tslint
+# See http://docs.atomist.com/user-guide/interfaces/cli/install/ for better setup
+  - wget https://github.com/atomist/rug-cli/releases/download/1.0.0-m.1/rug-cli-1.0.0-m.1-bin.tar.gz
+  - tar -xvf rug-cli-1.0.0-m.1-bin.tar.gz
+test:
+  - rug test
