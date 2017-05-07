@@ -4,17 +4,17 @@ import { EditProject } from "@atomist/rug/operations/ProjectEditor";
 import { Pattern } from "@atomist/rug/operations/RugOperation";
 
 /**
- * Sample TypeScript editor used by AddMyFirstEditor.
+ * Rewrite HDFS targets.
  */
-@Editor("MyFirstEditor", "sample Rug TypeScript editor")
+@Editor("LuigiTargetHDFSRewrite", "Rewrite HDFS targets")
 @Tags("documentation")
-export class MyFirstEditor implements EditProject {
+export class LuigiTargetHDFSRewrite implements EditProject {
 
     @Parameter({
-        displayName: "Some Input",
-        description: "example of how to specify a parameter using decorators",
+        displayName: "Local Target Dir",
+        description: "Local Target Dir to use in place of HDFS",
         pattern: Pattern.any,
-        validInput: "a description of the valid input",
+        validInput: "any file path",
         minLength: 1,
         maxLength: 100,
     })
@@ -25,4 +25,4 @@ export class MyFirstEditor implements EditProject {
     }
 }
 
-export const myFirstEditor = new MyFirstEditor();
+export const luigiTargetHDFSRewrite = new LuigiTargetHDFSRewrite();
